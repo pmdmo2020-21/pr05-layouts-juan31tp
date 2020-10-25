@@ -7,17 +7,211 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <!-- ESTA VISTA CORRESPONDE AL BOTÓN REDONDO -->
+    <!-- ESTA VISTA CORRESPONDE AL BOTÓN REDONDO
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_baseline_edit_24"
         app:tint="@color/white" />
 
-    <!-- ESTA VISTA CORRESPONDE A UNA LÍNEA HORIZONTAL -->
+    ESTA VISTA CORRESPONDE A UNA LÍNEA HORIZONTAL
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:background="@color/gray_divider" />
+        android:background="@color/gray_divider" />-->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:id="@+id/filmImg"
+        android:src="@drawable/header"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_2x"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/filmTitle"
+                android:text="@string/filmTitle"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/black"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/filmBookmark"
+                android:src="@drawable/ic_bookmark"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/filmInfo"
+            android:layout_marginVertical="@dimen/margin"
+            android:text="@string/filmInfo"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/btnRent"
+                android:text="@string/btnRent"
+                android:layout_margin="@dimen/margin"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/btnBuy"
+                android:text="@string/btnBuy"
+                android:layout_margin="@dimen/margin"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/gray_divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/margin_2x">
+
+            <!-- FIRST CIRCLE -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_edit_24"
+                    app:tint="@color/white"
+                    android:id="@+id/iconRatings"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lblRatings"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin"
+                    android:text="@string/lblRatings"/>
+
+            </LinearLayout>
+
+            <!-- SECOND CIRCLE -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_family"
+                    app:tint="@color/white"
+                    android:id="@+id/iconFamily"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lblFamily"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin"
+                    android:text="@string/lblFamily"/>
+
+            </LinearLayout>
+
+            <!-- THIRD CIRCLE -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/tomato"
+                    app:tint="@color/white"
+                    android:id="@+id/iconTomato"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lblTomato"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin"
+                    android:text="@string/lblTomato"/>
+
+            </LinearLayout>
+
+            <!-- FOURTH CIRCLE -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_similar"
+                    app:tint="@color/white"
+                    android:id="@+id/iconSimilar"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lblSimilar"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin"
+                    android:text="@string/lblSimilar"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/gray_divider" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin"
+            android:id="@+id/lblSynopsis"
+            android:textSize="@dimen/synopsis"
+            android:text="@string/synopsis"/>
+
+
+    </LinearLayout>
 
 </LinearLayout>
