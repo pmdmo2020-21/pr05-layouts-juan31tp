@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:id="@+id/filmImg"
+        android:scaleType="centerCrop"
+        android:src="@drawable/header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/filmTitle"
+        android:text="@string/filmTitle"
+        android:layout_margin="@dimen/margin_2x"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/filmImg"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/filmInfo"
+        android:text="@string/filmInfo"
+        android:layout_marginTop="@dimen/margin"
+        app:layout_constraintStart_toStartOf="@id/filmTitle"
+        app:layout_constraintTop_toBottomOf="@id/filmTitle"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/filmBookmark"
+        android:src="@drawable/ic_bookmark"
+        android:layout_marginRight="@dimen/margin_2x"
+        app:layout_constraintBottom_toBottomOf="@id/filmTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/filmTitle"/>
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnRent"
+        android:layout_marginLeft="@dimen/margin_2x"
+        android:layout_marginRight="@dimen/margin"
+        android:layout_marginTop="@dimen/margin_2x"
+        android:text="@string/btnRent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/filmInfo"/>
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/margin_2x"
+        android:layout_marginLeft="@dimen/margin"
+        android:id="@+id/btnBuy"
+        android:text="@string/btnBuy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnRent"
+        app:layout_constraintBottom_toBottomOf="@id/btnRent"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/gray_divider"
+        android:layout_margin="@dimen/margin_2x"
+        android:id="@+id/viewFirst"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnRent"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_edit_24"
+        app:tint="@color/white"
+        android:id="@+id/iconRatings"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_2x"
+        android:layout_marginRight="@dimen/margin_2x"
+        android:layout_marginLeft="@dimen/margin_2x"
+        app:layout_constraintStart_toStartOf="@+id/viewFirst"
+        app:layout_constraintTop_toBottomOf="@+id/viewFirst"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblRatings"
+        android:text="@string/lblRatings"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginRight="@dimen/margin_2x"
+        android:layout_marginLeft="@dimen/margin_2x"
+        android:layout_gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/iconRatings"
+        app:layout_constraintStart_toStartOf="@id/iconRatings"
+        app:layout_constraintTop_toBottomOf="@+id/iconRatings"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/iconFamily"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/ic_family"
+        app:layout_constraintBottom_toBottomOf="@+id/iconRatings"
+        android:layout_marginLeft="@dimen/margin_2x"
+        app:layout_constraintStart_toEndOf="@+id/iconRatings"
+        app:tint="@color/white" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblFamily"
+        android:text="@string/lblFamily"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginLeft="@dimen/margin_2x"
+        android:layout_marginRight="@dimen/margin_2x"
+        android:layout_gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/iconFamily"
+        app:layout_constraintStart_toStartOf="@id/iconFamily"
+        app:layout_constraintTop_toBottomOf="@+id/iconFamily"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/iconTomato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/tomato"
+        app:layout_constraintBottom_toBottomOf="@+id/iconFamily"
+        android:layout_marginLeft="@dimen/margin_2x"
+        app:layout_constraintStart_toEndOf="@+id/iconFamily"
+        app:tint="@color/white" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblTomato"
+        android:text="@string/lblTomato"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginLeft="@dimen/margin_2x"
+        android:layout_marginRight="@dimen/margin_2x"
+        android:layout_gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/iconTomato"
+        app:layout_constraintStart_toStartOf="@id/iconTomato"
+        app:layout_constraintTop_toBottomOf="@+id/iconTomato"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/iconSimilar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/ic_similar"
+        app:layout_constraintBottom_toBottomOf="@+id/iconTomato"
+        android:layout_marginLeft="@dimen/margin_2x"
+        app:layout_constraintStart_toEndOf="@+id/iconTomato"
+        app:tint="@color/white" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblSimilar"
+        android:text="@string/lblSimilar"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginLeft="@dimen/margin_2x"
+        android:layout_marginRight="@dimen/margin_2x"
+        android:layout_gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/iconSimilar"
+        app:layout_constraintStart_toStartOf="@id/iconSimilar"
+        app:layout_constraintTop_toBottomOf="@+id/iconSimilar"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/gray_divider"
+        android:layout_margin="@dimen/margin_2x"
+        android:id="@+id/viewSecond"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblRatings"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/lblSynopsis"
+        android:text="@string/synopsis"
+        android:textSize="@dimen/synopsis"
+        android:layout_marginTop="@dimen/margin_2x"
+        app:layout_constraintStart_toStartOf="@+id/viewSecond"
+        app:layout_constraintEnd_toEndOf="@+id/viewSecond"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewSecond"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
